@@ -1,0 +1,19 @@
+﻿@model List<User>
+
+@{
+}
+
+<h2>All Users</h2>
+
+@foreach (User u in Model)
+            {
+                <h6>@u.Id. @u.FirstName</h6>
+                <div> 
+                     <p style="margin-left:50px">DOB: @u.Dob.ToShortDateString()</p>
+                     <p style="margin-left:50px">T-shirt size: @u.Size</p>
+                </div>
+            }
+
+<a href="https://localhost:44322/Home/Registration">
+    <button style="margin-top:25px">Register another user</button>
+</a>

@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="post" asp-action="SaveUser">
+    <h1 style="padding-bottom: 50px">Registration Form</h1>
+    <h3 style="padding-bottom:20px">Enter information below to register user</h3>
+
+    <div>
+        <h5>Name</h5>
+        <input style="width:300px" name="FirstName" id="FirstName" type="text" placeholder="First" / required>
+        <input style="margin-left:25px; width:300px" name="LastName" id="lastName" type="text" placeholder="Last" />
+    </div>
+
+    <h5 style="margin-top:20px">Email</h5>
+    <input style="width:100%" type="email" name="Email" id="Email" placeholder="email@example.com" />
+
+    <h5 style="margin-top:20px">Password</h5>
+    <input style="width:100%" type="password" id="Pwd" name="Pwd" placeholder="Create password"
+           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase
+           and lowercase letter, and be at least 8 character long" required />
+
+    <h5 style="margin-top:20px">Phone Number</h5>
+    <input type="tel" name="PhuneNum" id="PhoneNum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="111-111-1111" />
+
+    <h5 style="margin-top:20px">Date of birth</h5>
+    <input type="date" id="Dob" name="Dob" min="1900-01-01" max="2021-12-31" />
+
+    <div>
+        <label style="margin-top:20px" for="Size">Choose t-shirt size: </label>
+        <select name="Size" id="Size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    </div>
+
+    <!--
+    <label style="margin-top:20px" for="avatar">Choose a profile picture: </label>
+    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    -->
+
+    <div>
+        <input style="margin-top:20px" type="submit" value="Create User" />
+    </div>
+</form>
